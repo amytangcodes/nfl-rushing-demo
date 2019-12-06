@@ -13,7 +13,7 @@ function createData(id, date, name, shipTo, paymentMethod, amount) {
   return { id, date, name, shipTo, paymentMethod, amount };
 }
 
-const rows = [
+const ROWS = [
   createData(
     0,
     "16 Mar, 2019",
@@ -70,7 +70,7 @@ export default function Orders() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>NFL Rushing Stats</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
@@ -82,7 +82,7 @@ export default function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {ROWS.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
