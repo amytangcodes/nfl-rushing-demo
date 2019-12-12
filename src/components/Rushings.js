@@ -84,7 +84,7 @@ const Rushings = ({ players }) => {
 };
 
 Rushings.propTypes = {
-  players: PropTypes.object.isRequired
+  players: PropTypes.array.isRequired
 };
 
 export default Rushings;
