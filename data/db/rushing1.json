@@ -1,6 +1,0 @@
-{ "rank": "1", "player": "Joe Banyard", "team": "JAX", "pos": "RB", "att": 2, "attG": 2, "yds": 7, "Avg": 3.5, "ydsG": 7, "td": 0, "lng": "7", "first": 0, "firstPer": 0, "twentyPlus": 0, "fortyPlus": 0, "fum": 0}
-{ "rank": "2", "player": "Shaun Hill", "team": "MIN", "pos": "QB", "att": 5, "attG": 1.7, "yds": 5, "Avg": 1, "ydsG": 1.7, "td": 0, "lng": "9", "first": 0, "firstPer": 0, "twentyPlus": 0, "fortyPlus": 0, "fum": 0}
-{ "rank": "3", "player": "Breshad Perriman", "team": "BAL", "pos": "WR", "att": 1, "attG": 0.1, "yds": 2, "Avg": 2, "ydsG": 0.1, "td": 0, "lng": "2", "first": 0,"firstPer": 0, "twentyPlus": 0, "fortyPlus": 0, "fum": 0}
-{ "rank": "4", "player": "Charlie Whitehurst", "team": "CLE", "pos": "QB", "att": 2, "attG": 2, "yds": 1, "Avg": 0.5, "ydsG": 1, "td": 0, "lng": "2", "first": 0, "firstPer": 0, "twentyPlus": 0, "fortyPlus": 0, "fum": 0}
-{ "rank": "5", "player": "Lance Dunbar", "team": "DAL", "pos": "RB", "att": 9, "attG": 0.7, "yds": 31, "Avg": 3.4, "ydsG": 2.4, "td": 1, "lng": "10", "first": 3, "firstPer": 33.3, "twentyPlus": 0, "fortyPlus": 0, "fum": 0 }
-{"rank": "1", "player": "Mark Ingram", "team": "NO", "pos": "RB", "att": "twentyPlus", "attG": 12.8, "yds": "1,043", "Avg": 5.1, "ydsG": 65.2, "td": 6, "lng": "75T", "first": 49, "firstPer": 23.9, "twentyPlus": 4, "fortyPlus": 2, "fum": 2}
