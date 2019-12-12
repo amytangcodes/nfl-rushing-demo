@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import Link from "@material-ui/core/Link";
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -31,72 +32,59 @@ const preventDefault = event => {
   event.preventDefault();
 };
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   seeMore: {
     marginTop: theme.spacing(3)
   }
-});
+}));
 
-class Rushings extends Component {
-  state = {
-    players: []
-  };
-
-  async componentWillMount() {
-    const response = await fetch("/api/players");
-    const resp = await response.json();
-
-    console.log({ resp });
-
-    this.setState({ players: resp.data });
-  }
-
-  render() {
-    const { classes } = this.props;
-    const { players } = this.state;
-
-    return (
-      <React.Fragment>
-        <Title>NFL Rushing Stats</Title>
-        <Table size="small">
-          <TableHead>
-            <TableRow>
-              {HEADERS.map(header => (
-                <TableCell key={header.id}>{header}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {players.map(player => (
-              <TableRow key={player.id}>
-                <TableCell>{player.rank}</TableCell>
-                <TableCell>{player.player}</TableCell>
-                <TableCell>{player.team}</TableCell>
-                <TableCell>{player.pos}</TableCell>
-                <TableCell>{player.att}</TableCell>
-                <TableCell>{player.attG}</TableCell>
-                <TableCell>{player.yds}</TableCell>
-                <TableCell>{player.avg}</TableCell>
-                <TableCell>{player.ydsG}</TableCell>
-                <TableCell>{player.td}</TableCell>
-                <TableCell>{player.lng}</TableCell>
-                <TableCell>{player.first}</TableCell>
-                <TableCell>{player.firstPer}</TableCell>
-                <TableCell>{player.twentyPlus}</TableCell>
-                <TableCell>{player.fortyPlus}</TableCell>
-                <TableCell>{player.fum}</TableCell>
-              </TableRow>
+const Rushings = ({ players }) => {
+  const classes = useStyles();
+  return (
+    <React.Fragment>
+      <Title>NFL Rushing Stats</Title>
+      <Table size="small">
+        <TableHead>
+          <TableRow>
+            {HEADERS.map(header => (
+              <TableCell key={header.id}>{header}</TableCell>
             ))}
-          </TableBody>
-        </Table>
-        <div className={classes.seeMore}>
-          <Link color="primary" href="#" onClick={preventDefault}>
-            See more rushing stats
-          </Link>
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {players.map(player => (
+            <TableRow key={player.id}>
+              <TableCell>{player.rank}</TableCell>
+              <TableCell>{player.player}</TableCell>
+              <TableCell>{player.team}</TableCell>
+              <TableCell>{player.pos}</TableCell>
+              <TableCell>{player.att}</TableCell>
+              <TableCell>{player.attG}</TableCell>
+              <TableCell>{player.yds}</TableCell>
+              <TableCell>{player.avg}</TableCell>
+              <TableCell>{player.ydsG}</TableCell>
+              <TableCell>{player.td}</TableCell>
+              <TableCell>{player.lng}</TableCell>
+              <TableCell>{player.first}</TableCell>
+              <TableCell>{player.firstPer}</TableCell>
+              <TableCell>{player.twentyPlus}</TableCell>
+              <TableCell>{player.fortyPlus}</TableCell>
+              <TableCell>{player.fum}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+      <div className={classes.seeMore}>
+        <Link color="primary" href="#" onClick={preventDefault}>
+          See more rushing stats
+        </Link>
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default withStyles(styles)(Rushings);
+Rushings.propTypes = {
+  players: PropTypes.object.isRequired
+};
+
+export default Rushings;

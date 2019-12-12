@@ -119,7 +119,8 @@ const styles = theme => ({
 
 class Dashboard extends Component {
   state = {
-    open: true
+    open: true,
+    players: []
   };
 
   handleDrawerOpen = () => {
@@ -129,8 +130,18 @@ class Dashboard extends Component {
     this.setState({ open: false });
   };
 
+  async componentWillMount() {
+    const response = await fetch("/api/players");
+    const resp = await response.json();
+
+    console.log({ resp });
+
+    this.setState({ players: resp.data });
+  }
+
   render() {
     const { classes } = this.props;
+    const { players } = this.state;
     const { open } = this.state;
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
     return (
@@ -204,7 +215,7 @@ class Dashboard extends Component {
               {/* Recent Rushings */}
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <Rushings />
+                  <Rushings players={players} />
                 </Paper>
               </Grid>
             </Grid>
