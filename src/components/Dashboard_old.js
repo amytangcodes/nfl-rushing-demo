@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import clsx from "clsx";
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
@@ -38,7 +38,7 @@ const Copyright = () => {
 
 const drawerWidth = 240;
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: "flex"
   },
@@ -115,24 +115,50 @@ const styles = theme => ({
   fixedHeight: {
     height: 240
   }
-});
+}));
 
 class Dashboard extends Component {
-  state = {
-    open: true
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: [],
+      setOpen: true
+    };
+  }
+
+  async componentWillMount() {
+    const response = await fetch("/api/players");
+    const resp = await response.json();
+
+    // console.log({ resp });
+
+    this.setState({ players: resp.data });
+  }
+
+  handleChangeExtractedText = ({ target }) => {
+    this.setState({ extractedText: target.value });
   };
 
   handleDrawerOpen = () => {
-    this.setState({ open: true });
+    this.setState({ setOpen: true });
   };
+
   handleDrawerClose = () => {
-    this.setState({ open: false });
+    this.setState({ setOpen: false });
+  };
+
+  pushToPlayer = id => {
+    const { history } = this.props;
+    history.push(`/player/${id}`);
   };
 
   render() {
-    const { classes } = this.props;
-    const { open } = this.state;
+    const classes = useStyles();
+    const { players } = this.state;
+    // const [open, setOpen] = React.useState(true);
+
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -204,7 +230,7 @@ class Dashboard extends Component {
               {/* Recent Rushings */}
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                  <Rushings />
+                  <Rushings players={players} />
                 </Paper>
               </Grid>
             </Grid>
@@ -218,4 +244,4 @@ class Dashboard extends Component {
   }
 }
 
-export default withStyles(styles)(Dashboard);
+export default Dashboard;

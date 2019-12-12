@@ -1,23 +1,23 @@
-'use strict';
+"use strict";
 
-const mongoose = require('mongoose');
-const express = require('express');
-
+const mongoose = require("mongoose");
+const express = require("express");
 // 1. Create main express instance
 const app = express();
 
 // 2. Require routes
-const { router: bookRoutes } = require('./routes/books/bookRoutes');
+const { router: playerRoutes } = require("./routes/players/playerRoutes");
 
 // 3. Require constants
-const { URL, PORT } = require('./utils/constants');
+const { URL, PORT } = require("./utils/constants");
 
 // 4. Ensure that the router is using body parser to appropriately format incoming requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // 5. Utilise routes
-app.use('/api/books', bookRoutes);
+// router.get("/");
+app.use("/api/players", playerRoutes);
 
 // 6. Start server
 mongoose
@@ -28,6 +28,6 @@ mongoose
       console.log(`Server is running on PORT: ${PORT}`);
     });
   })
-  .catch((err) => {
+  .catch(err => {
     console.error(err);
-  })
+  });
