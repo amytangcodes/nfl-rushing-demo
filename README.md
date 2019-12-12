@@ -1,4 +1,4 @@
-### little code along project 👶🏽
+### NFL Rushing Table Demo 👶🏽
 
 ## To get started
 
