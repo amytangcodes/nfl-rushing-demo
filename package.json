@@ -19,9 +19,9 @@
   "license": "ISC",
   "bugs": {
     "type": "git",
-    "url": "git+https://github.com/amytangcodes/sports-app.git"
+    "url": "git+https://github.com/amytangcodes/nfl-rushing-demo.git"
   },
-  "homepage": "https://github.com/HackerYou/con-ed-full-stack#readme",
+  "homepage": "https://github.com/amytangcodes/nfl-rushing-demo#readme",
   "dependencies": {
     "@material-ui/core": "^4.7.1",
     "@material-ui/icons": "^4.5.1",
