@@ -1,5 +1,5 @@
 {
-  "name": "sports-app",
+  "name": "nfl-rushing-demo",
   "version": "1.0.0",
   "description": "HackerYou Fullstack Masterclass Project",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/amytangcodes/nfl-rushing-demo.git"
   },
-  "homepage": "https://git.heroku.com/nfl-rushing-table-demo.git",
+  "homepage": "https://nfl-rushing-table-demo.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.7.1",
     "@material-ui/icons": "^4.5.1",

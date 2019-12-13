@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/nfl-rushing-table-demo.git/static/css/main.795991f2.chunk.css",
-    "main.js": "/nfl-rushing-table-demo.git/static/js/main.80cef968.chunk.js",
-    "main.js.map": "/nfl-rushing-table-demo.git/static/js/main.80cef968.chunk.js.map",
-    "runtime-main.js": "/nfl-rushing-table-demo.git/static/js/runtime-main.d3470c3e.js",
-    "runtime-main.js.map": "/nfl-rushing-table-demo.git/static/js/runtime-main.d3470c3e.js.map",
-    "static/js/2.2498e23d.chunk.js": "/nfl-rushing-table-demo.git/static/js/2.2498e23d.chunk.js",
-    "static/js/2.2498e23d.chunk.js.map": "/nfl-rushing-table-demo.git/static/js/2.2498e23d.chunk.js.map",
-    "index.html": "/nfl-rushing-table-demo.git/index.html",
-    "precache-manifest.f95df6c2832b09ea8bb496b80155aad8.js": "/nfl-rushing-table-demo.git/precache-manifest.f95df6c2832b09ea8bb496b80155aad8.js",
-    "service-worker.js": "/nfl-rushing-table-demo.git/service-worker.js",
-    "static/css/main.795991f2.chunk.css.map": "/nfl-rushing-table-demo.git/static/css/main.795991f2.chunk.css.map",
-    "static/js/2.2498e23d.chunk.js.LICENSE": "/nfl-rushing-table-demo.git/static/js/2.2498e23d.chunk.js.LICENSE"
+    "main.css": "/static/css/main.795991f2.chunk.css",
+    "main.js": "/static/js/main.4f1a4d25.chunk.js",
+    "main.js.map": "/static/js/main.4f1a4d25.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e746eb8e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e746eb8e.js.map",
+    "static/js/2.8f515638.chunk.js": "/static/js/2.8f515638.chunk.js",
+    "static/js/2.8f515638.chunk.js.map": "/static/js/2.8f515638.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.790a4d9f054adba6ac9a49f3d7deff82.js": "/precache-manifest.790a4d9f054adba6ac9a49f3d7deff82.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.795991f2.chunk.css.map": "/static/css/main.795991f2.chunk.css.map",
+    "static/js/2.8f515638.chunk.js.LICENSE": "/static/js/2.8f515638.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.d3470c3e.js",
-    "static/js/2.2498e23d.chunk.js",
+    "static/js/runtime-main.e746eb8e.js",
+    "static/js/2.8f515638.chunk.js",
     "static/css/main.795991f2.chunk.css",
-    "static/js/main.80cef968.chunk.js"
+    "static/js/main.4f1a4d25.chunk.js"
   ]
 }

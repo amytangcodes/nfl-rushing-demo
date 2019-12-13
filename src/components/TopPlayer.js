@@ -14,13 +14,31 @@ const useStyles = makeStyles({
   }
 });
 
-export default function TopPlayer() {
+const TopPlayer = ({ players }) => {
   const classes = useStyles();
-  return (
+  const topPlayer = players.filter(e => {
+    return e.rank === 1;
+  });
+
+  // if (topPlayer!) {
+  //   return (
+  //     <React.Fragment>
+  //       <Title>Top Player</Title>
+  //       <Typography color="textSecondary" className={classes.depositContext}>
+  //         There is no top player
+  //       </Typography>
+  //     </React.Fragment>
+  //   )
+  // };
+
+  console.log({ players });
+  console.log(Object.values(topPlayer));
+
+  return topPlayer ? (
     <React.Fragment>
       <Title>Top Player</Title>
       <Typography component="p" variant="h4">
-        Joe Frank
+        {topPlayer.player}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         on 15 March, 2019
@@ -31,5 +49,14 @@ export default function TopPlayer() {
         </Link>
       </div>
     </React.Fragment>
+  ) : (
+    <React.Fragment>
+      <Title>Top Player</Title>
+      <Typography color="textSecondary" className={classes.depositContext}>
+        There is no top player
+      </Typography>
+    </React.Fragment>
   );
-}
+};
+
+export default TopPlayer;
