@@ -11,7 +11,8 @@
     "start:client": "react-scripts start",
     "build:client": "react-scripts build",
     "move:client": "cp -R build/ public",
-    "git:remote:set": "git remote set-url origin git@github.com:amytangcodes/nfl-rushing-demo.git"
+    "git:remote:set": "git remote set-url origin git@github.com:amytangcodes/nfl-rushing-demo.git",
+    "git:remote:create": "git remote add origin git@github.com:amytangcodes/nfl-rushing-demo.git"
   },
   "repository": "",
   "keywords": [],
@@ -21,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/amytangcodes/nfl-rushing-demo.git"
   },
-  "homepage": "https://github.com/amytangcodes/nfl-rushing-demo#readme",
+  "homepage": "https://git.heroku.com/nfl-rushing-table-demo.git",
   "dependencies": {
     "@material-ui/core": "^4.7.1",
     "@material-ui/icons": "^4.5.1",
@@ -50,5 +51,6 @@
     "ignore": [
       "build/**"
     ]
-  }
+  },
+  "devDependencies": {}
 }
